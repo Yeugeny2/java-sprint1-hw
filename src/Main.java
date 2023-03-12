@@ -3,21 +3,24 @@ public class Main {
 public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
-    StepTracker stepCount = new StepTracker();
-    StepTracker changeGoal = new StepTracker();
+    StepTracker counter = new StepTracker(scanner);
+
+    //StepTracker changeGoal = new StepTracker(scanner);
     while (true) {
      printMenu();
         int i = scanner.nextInt();
         if (i == 1) {
             System.out.println("Выполняется команда 1");
-           stepCount.addNewNumberStepsPerDay(); //Вызываем класс по вводу количества шагов за день
+           counter.addNewNumberStepsPerDay(); //Вызываем класс по вводу количества шагов за день
         } else if (i == 2) {
             System.out.println("Выполняется команда 2");
-            changeGoal.changeStepGoal();
+            counter.changeStepGoal();
             //Вызываем класс по изменению цели количества шагов за день
         } else if (i == 3) {
             System.out.println("Выполняется команда 3");
-            //Вызываем класс Напечатать статистику за определенный месяц
+            System.out.println("Количество пройденных шагов по дням " + printDaysAndStepsFromMonth());
+            System.out.println("Общее количество шагов за месяц" + sumStepsFromMonth());
+            //Вызываем метод Напечатать статистику за определенный месяц
         } else if (i == 4) {
             System.out.println("Пока");
             return;
