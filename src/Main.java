@@ -19,7 +19,8 @@ public static void main(String[] args) {
             //Вызываем класс по изменению цели количества шагов за день
         } else if (i == 3) {
             System.out.println("Выполняется команда 3");
-            System.out.println("Количество пройденных шагов по дням " + statistic.printDaysAndStepsFromMonth());
+            System.out.println("Количество пройденных шагов по дням ");
+            statistic.printDaysAndStepsFromMonth();
             System.out.println("Общее количество шагов за месяц" + statistic.sumStepsFromMonth());
             //Вызываем метод Напечатать статистику за определенный месяц
         } else if (i == 4) {

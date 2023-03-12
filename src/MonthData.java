@@ -6,7 +6,7 @@ class MonthData {
     void printDaysAndStepsFromMonth() {
         System.out.println("Количество пройденных шагов по дням");
         for (int i = 0; i < days.length; i = i + 1) {
-            System.out.println(days[i + 1] + "День: " +);// Мне нужно значение
+            System.out.println(days[i + 1] + "День: " + );// Мне нужно значение
             // из объекта массива monthToData, как к нему обратиться?
         }
     }
