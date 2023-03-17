@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] Args) {
         Scanner scanner = new Scanner(System.in);
-        StepTracker inserter = new StepTracker();
+        StepTracker inserter = new StepTracker(scanner);
         while (true) {
             printMenu();
             int usersInput = scanner.nextInt();
