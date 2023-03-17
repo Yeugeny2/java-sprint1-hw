@@ -1,43 +1,35 @@
 import java.util.Scanner;
+
 public class Main {
-public static void main(String[] args) {
+    public static void main(String[] Args) {
+        Scanner scanner = new Scanner(System.in);
+        StepTracker inserter = new StepTracker();
+        while (true) {
+            printMenu();
+            int usersInput = scanner.nextInt();
 
-    Scanner scanner = new Scanner(System.in);
-    StepTracker counter = new StepTracker(scanner);
-    MonthData statistic = new MonthData();
-
-    //StepTracker changeGoal = new StepTracker(scanner);
-    while (true) {
-     printMenu();
-        int i = scanner.nextInt();
-        if (i == 1) {
-            System.out.println("Выполняется команда 1");
-           counter.addNewNumberStepsPerDay(); //Вызываем класс по вводу количества шагов за день
-        } else if (i == 2) {
-            System.out.println("Выполняется команда 2");
-            counter.changeStepGoal();
-            //Вызываем класс по изменению цели количества шагов за день
-        } else if (i == 3) {
-            System.out.println("Выполняется команда 3");
-            System.out.println("Количество пройденных шагов по дням ");
-            statistic.printDaysAndStepsFromMonth();
-            System.out.println("Общее количество шагов за месяц" + statistic.sumStepsFromMonth());
-            //Вызываем метод Напечатать статистику за определенный месяц
-        } else if (i == 4) {
-            System.out.println("Пока");
-            return;
-        } else {
-            System.out.println("Извините, такой команды пока нет");
+            if (usersInput == 1) {
+                System.out.println("Выполняется команда 1");
+                inserter.addNewNumberStepsPerDay(); //Вызывается класс, метод или команда для пунка 1
+            } else if (usersInput == 2) {
+                System.out.println("Выполняется команда 2");
+                //Вызывается класс, метод или команда для пункта 2
+            } else if (usersInput == 3) {
+                System.out.println("Выполняется команда 3");
+                //Вызывается класс, метод или команда для пункта 3
+            } else if (usersInput == 4) {
+                System.out.println("Пока");
+                return;
+            }else {
+                System.out.println("Введена неверная команда, введите значение от 1 до 4");
+            }
         }
     }
-}
-
-
-public static void printMenu() {
-    System.out.println("Введите команду от 1 до 4");
-    System.out.println("1 - Ввод количества шагов за день");
-    System.out.println("2 - Изменить цель по количеству шагов за день");
-    System.out.println("3 - Напечатать статистику за опеределенный месяц");
-    System.out.println("4 - Выйти из приложения");
-}
+    public static void printMenu() {
+        System.out.println("Что вы хотите сделать сейчас? Введите команду от 1 до 4");
+        System.out.println(1 + ".Ввести количество шагов за определенный день");
+        System.out.println(2 + ".Изменить цель по количеству шагов за день");
+        System.out.println(3 + ".Напечатать статистику за определенный месяц");
+        System.out.println(4 + ".Выход");
+    }
 }
