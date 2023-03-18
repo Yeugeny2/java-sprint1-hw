@@ -11,7 +11,7 @@ public class MonthData {
         int sum = 0;
         for (int j = 0; j < days.length; j = j + 1) {
             sum = sum + days[j];
-            System.out.println("Общее количество шагов за месяц = " + sum);
+
         }return sum;
     }
 

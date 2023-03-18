@@ -16,7 +16,7 @@ public class Main {
                 inserter.changeStepGoal();//Вызывается класс, метод или команда для пункта 2
             } else if (usersInput == 3) {
                 System.out.println("Выполняется команда 3");
-                //Вызывается класс, метод или команда для пункта 3
+                inserter.printStatistic();//Вызывается класс, метод или команда для пункта 3
             } else if (usersInput == 4) {
                 System.out.println("Пока");
                 return;
