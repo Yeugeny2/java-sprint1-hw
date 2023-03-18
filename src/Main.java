@@ -13,7 +13,7 @@ public class Main {
                 inserter.addNewNumberStepsPerDay(); //Вызывается класс, метод или команда для пунка 1
             } else if (usersInput == 2) {
                 System.out.println("Выполняется команда 2");
-                //Вызывается класс, метод или команда для пункта 2
+                inserter.changeStepGoal();//Вызывается класс, метод или команда для пункта 2
             } else if (usersInput == 3) {
                 System.out.println("Выполняется команда 3");
                 //Вызывается класс, метод или команда для пункта 3
