@@ -9,13 +9,13 @@ public class Main {
             int usersInput = scanner.nextInt();
 
             if (usersInput == 1) {
-                System.out.println("Выполняется команда 1");
+                //System.out.println("Выполняется команда 1");
                 inserter.addNewNumberStepsPerDay(); //Вызывается класс, метод или команда для пунка 1
             } else if (usersInput == 2) {
-                System.out.println("Выполняется команда 2");
+                //System.out.println("Выполняется команда 2");
                 inserter.changeStepGoal();//Вызывается класс, метод или команда для пункта 2
             } else if (usersInput == 3) {
-                System.out.println("Выполняется команда 3");
+                //System.out.println("Выполняется команда 3");
                 inserter.printStatistic();//Вызывается класс, метод или команда для пункта 3
             } else if (usersInput == 4) {
                 System.out.println("Пока");

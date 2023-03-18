@@ -3,7 +3,7 @@ public class MonthData {
 
     void printDaysAndStepsFromMonth() {
         for (int i = 0; i < days.length; i = i + 1) {
-            System.out.println((i + 1) + ".день: " + days[i]);
+            System.out.println((i + 1) + " день: " + days[i]);
         }
     }
 
@@ -31,7 +31,7 @@ public class MonthData {
         int finalSeries = 0;
         for (int m = 0; m < days.length; m = m + 1) {
             if (days[m] >= goalByStepsPerDay) { // Если количество шагов в m-ный день больше цели
-                System.out.println("Вы достигли цели по шагам или превзошли ее в " + days[m + 1] + " день.");
+                //System.out.println("Вы достигли цели по шагам или превзошли ее в " + days[m + 1] + " день.");
                 currentSeries = currentSeries + 1;
                 if(currentSeries > finalSeries) {
                     finalSeries = currentSeries;

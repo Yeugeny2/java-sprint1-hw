@@ -7,6 +7,7 @@ public class StepTracker {
 
 
     StepTracker(Scanner scan) {
+        scanner = scan;
         MonthData monthData = new MonthData();
         for (int i = 0; i < monthToData.length; i = i + 1) {
             monthToData[i] = new MonthData();
@@ -20,7 +21,7 @@ public class StepTracker {
 
         if (numberOfMonth >= 1) {
             if (numberOfMonth <= 12) {
-                System.out.println("Номер месяца сохранен в переменную numberOfMonth");//Здесь должно совершаться действие с присваиванием номера месяца
+                //System.out.println("Номер месяца сохранен в переменную numberOfMonth");//Здесь должно совершаться действие с присваиванием номера месяца
 
             }
         }else {
@@ -32,7 +33,7 @@ public class StepTracker {
         int numberOfDay = scanner.nextInt();
         if (numberOfDay > 0) {
             if (numberOfDay < 31) {
-                System.out.println("Номер дня сохранен в переменную numberOfDay");// Здесь должно совершаться действие с присваиванием номера дня
+                //System.out.println("Номер дня сохранен в переменную numberOfDay");// Здесь должно совершаться действие с присваиванием номера дня
             } else {
                 System.out.println("Введен неверный номер дня, введите номер дня от 1 до 30");
                 return;
@@ -42,7 +43,7 @@ public class StepTracker {
             System.out.println("Введите количество шагов, которое Вы хотите ввести");
             int numberOfSteps = scanner.nextInt();
             if (numberOfSteps > 0) {
-                System.out.println("Количество шагов сохранено в переменную numberOfSteps");
+                //System.out.println("Количество шагов сохранено в переменную numberOfSteps");
 
             } else {
                 System.out.println("Введено неверное количество шагов. Введите количество больше 0");
