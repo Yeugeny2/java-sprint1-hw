@@ -24,9 +24,9 @@ public class Main {
     }
     public static void printMenu() {
         System.out.println("Что вы хотите сделать сейчас? Введите команду от 1 до 4");
-        System.out.println(1 + ".Ввести количество шагов за определенный день");
-        System.out.println(2 + ".Изменить цель по количеству шагов за день");
-        System.out.println(3 + ".Напечатать статистику за определенный месяц");
-        System.out.println(4 + ".Выход");
+        System.out.println("1.Ввести количество шагов за определенный день");
+        System.out.println("2.Изменить цель по количеству шагов за день");
+        System.out.println("3.Напечатать статистику за определенный месяц");
+        System.out.println("4.Выход");
     }
 }
