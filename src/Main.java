@@ -9,16 +9,13 @@ public class Main {
             int usersInput = scanner.nextInt();
 
             if (usersInput == 1) {
-                //System.out.println("Выполняется команда 1");
-                inserter.addNewNumberStepsPerDay(); //Вызывается класс, метод или команда для пунка 1
+                inserter.addNewNumberStepsPerDay(); //Вызывается метод для ввода количества шагов за определенный день
             } else if (usersInput == 2) {
-                //System.out.println("Выполняется команда 2");
-                inserter.changeStepGoal();//Вызывается класс, метод или команда для пункта 2
+                inserter.changeStepGoal();//Вызывается метод для изменения цели по количеству шагов за день
             } else if (usersInput == 3) {
-                //System.out.println("Выполняется команда 3");
-                inserter.printStatistic();//Вызывается класс, метод или команда для пункта 3
+                inserter.printStatistic();//Вызывается метод печати статистики за выбранный пользователем месяц
             } else if (usersInput == 4) {
-                System.out.println("Пока");
+                System.out.println("Пока"); // Завершение метода
                 return;
             }else {
                 System.out.println("Введена неверная команда, введите значение от 1 до 4");

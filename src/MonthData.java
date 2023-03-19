@@ -11,7 +11,6 @@ public class MonthData {
         int sum = 0;
         for (int j = 0; j < days.length; j = j + 1) {
             sum = sum + days[j];
-
         }return sum;
     }
 
@@ -24,27 +23,19 @@ public class MonthData {
         }return maxNumberOfSteps;
     }
 
-
     int bestSeries(int goalByStepsPerDay) {
-        //int dayBetterThanGoal = 0;
         int currentSeries = 0;
         int finalSeries = 0;
+
         for (int m = 0; m < days.length; m = m + 1) {
             if (days[m] >= goalByStepsPerDay) { // Если количество шагов в m-ный день больше цели
-                //System.out.println("Вы достигли цели по шагам или превзошли ее в " + days[m + 1] + " день.");
-                currentSeries = currentSeries + 1;
-                if(currentSeries > finalSeries) {
-                    finalSeries = currentSeries;
-                    currentSeries = 0;                             //finalSeries = currentSeries;
-                }                                                  // Текущая серия + 1
-            } else  {                                              // Если меньше цели
-                currentSeries = 0;                       // Финальная серия = текущей серии
-                                                                   // Текущую серию обнуляем.             //if (finalSeries < currentSeries) {
+                currentSeries = currentSeries + 1; // Тогда добавляем к текущей серии дней единицу
+                if(currentSeries > finalSeries) {  //Если текущая серия дней превышающих цель > финальной серии
+                    finalSeries = currentSeries;   // Тогда присваиваем финальной серии значение текущей серии
+                }
+            } else  {                              // Иначе если количество шагов в m-ный день меньше цели
+                currentSeries = 0;                 // Тогда обнуляем текущую серию
             }
-
-                                                                //} else {
-                                                                //currentSeries = 0;
-                                                                //}
         }
         return finalSeries;
     }

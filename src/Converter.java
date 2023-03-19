@@ -5,10 +5,10 @@ public class Converter {
 
     }
     int convertToKm(int steps) {
-      int lenghtOfStep = 75;                                                           //int lenghtOfStep = 1;
-      int distanse =(lenghtOfStep * steps)/1000;                                            //int distance = (lenghtOfStep * steps)/1000;
-                                                                                               //return distance;
-        return distanse;
+      int lenghtOfStep = 75;
+      int distance =(lenghtOfStep * steps)/100000;
+
+        return distance;
     }
 
 

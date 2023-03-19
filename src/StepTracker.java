@@ -5,7 +5,6 @@ public class StepTracker {
     MonthData[] monthToData = new MonthData[12];
     int goalByStepsPerDay = 10000;
 
-
     StepTracker(Scanner scan) {
         scanner = scan;
         MonthData monthData = new MonthData();
@@ -14,42 +13,37 @@ public class StepTracker {
         }
     }
 
-
     void addNewNumberStepsPerDay() {
         System.out.println("Введите номер месяца, за который Вы хотите ввести количество шагов, от 1 до 12");
         int numberOfMonth = scanner.nextInt();
 
-        if (numberOfMonth >= 1) {
-            if (numberOfMonth <= 12) {
-                //System.out.println("Номер месяца сохранен в переменную numberOfMonth");//Здесь должно совершаться действие с присваиванием номера месяца
-
-            }
-        }else {
+        if (numberOfMonth > 12) {
+                System.out.println("Введен неверный номер месяца, введите номер от 1 до 12");
+                return;
+        } else if(numberOfMonth < 1) {
             System.out.println("Введен неверный номер месяца, введите номер от 1 до 12");
             return;
         }
 
         System.out.println("Введите номер дня, за который вы хотите ввести количество шагов");
         int numberOfDay = scanner.nextInt();
-        if (numberOfDay > 0) {
-            if (numberOfDay < 31) {
-                //System.out.println("Номер дня сохранен в переменную numberOfDay");// Здесь должно совершаться действие с присваиванием номера дня
-            } else {
-                System.out.println("Введен неверный номер дня, введите номер дня от 1 до 30");
-                return;
-            }
+        if (numberOfDay <= 0) {
+            System.out.println("Введен неверный номер дня, введите номер дня от 1 до 30");
+            return;
+        } else if ( numberOfDay > 30) {
+            System.out.println("Введен неверный номер дня, введите номер дня от 1 до 30");
+            return;
+
         }
 
             System.out.println("Введите количество шагов, которое Вы хотите ввести");
             int numberOfSteps = scanner.nextInt();
-            if (numberOfSteps > 0) {
-                //System.out.println("Количество шагов сохранено в переменную numberOfSteps");
-
-            } else {
+            if (numberOfSteps <= 0) {
                 System.out.println("Введено неверное количество шагов. Введите количество больше 0");
                 return;
-            }MonthData monthData = monthToData[numberOfMonth - 1];
-            monthData.days[numberOfDay - 1] = numberOfSteps;
+            }
+            MonthData monthData = monthToData[numberOfMonth - 1]; //Обращаемся к соответствующему объекту monthData массива monthToData
+            monthData.days[numberOfDay - 1] = numberOfSteps;      //Присваиваем соответствующему индексу массива days количество шагов
 
     }
 
@@ -71,11 +65,15 @@ public class StepTracker {
         System.out.println("Введите номер месяца, за который вы хотите получить статистику");
         int monthNumber = scanner.nextInt();
         if (monthNumber < 1) {
-            if (monthNumber > 12) {
-                System.out.println("Вы ввели неверный номер месяца. Введите число от 1 до 12");
-                return;
-            }
-        } monthData = monthToData[monthNumber - 1]; // Получение соответствующего месяца
+            System.out.println("Вы ввели неверный номер месяца. Введите число от 1 до 12");
+            return;
+        }
+            else if (monthNumber > 12) {
+            System.out.println("Вы ввели неверный номер месяца. Введите число от 1 до 12");
+            return;
+        }
+
+            monthData = monthToData[monthNumber - 1]; // Получение соответствующего месяца
         int sumSteps = monthData.sumStepsFromMonth(); // Получение суммы шагов за месяц
         monthData.printDaysAndStepsFromMonth(); // Получаем статистику шагов за месяц по дням
         System.out.println("Общее количество шагов за месяц = " + monthData.sumStepsFromMonth());
